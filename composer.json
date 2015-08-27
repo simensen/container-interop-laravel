@@ -1,0 +1,48 @@
+{
+    "name": "monii/container-interop-laravel",
+    "description": "Laravel adapter for Container Interop",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "monii.io",
+            "email": "team@monii.com"
+        },
+        {
+            "name": "Beau Simensen",
+            "email": "beau@dflydev.com"
+        },
+        {
+            "name": "Steve Marks",
+            "email": "steve.marks@monii.com"
+        },
+        {
+            "name": "Alec Charlton",
+            "email": "alec.charlton@monii.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "container-interop/container-interop": "^1.1",
+        "illuminate/contracts": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Monii\\Interop\\Container\\Laravel\\": "src"
+        }
+    },
+    "require-dev": {
+        "illuminate/container": "^5.0",
+        "phpunit/phpunit": "^4.8",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Monii\\Interop\\Container\\Laravel\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.x-dev"
+        }
+    }
+}
