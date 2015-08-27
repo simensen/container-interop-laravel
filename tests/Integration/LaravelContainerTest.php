@@ -36,35 +36,35 @@ class LaravelContainerTest extends PHPUnit_Framework_TestCase
     public function provideFalseData()
     {
         return [
-            // Named but does not exist in the container.
-            [$this->createContainer(), 'some.id'],
+            'Named but does not exist in the container.' =>
+                [$this->createContainer(), 'some.id'],
 
-            // Interface exists but is itself not instantiable and not bound to a concrete class.
-            [$this->createContainer(), ContainerInterface::class],
+            'Interface exists but is itself not instantiable and not bound to a concrete class.' =>
+                [$this->createContainer(), ContainerInterface::class],
         ];
     }
 
     public function provideTrueData()
     {
         return [
-            [
-                // Named and bound to a concrete class.
-                $this->createContainer(['some.id' => self::class]),
-                'some.id',
-                self::class
-            ],
-            [
-                // Not instantiable but bound to a concrete class.
-                $this->createContainer([ContainerInterface::class => self::class]),
-                ContainerInterface::class,
-                self::class
-            ],
-            [
-                // Has not been bound but is an instantiable concrete class.
-                $this->createContainer(),
-                self::class,
-                self::class
-            ],
+            'Named and bound to a concrete class.' =>
+                [
+                    $this->createContainer(['some.id' => self::class]),
+                    'some.id',
+                    self::class
+                ],
+            'Not instantiable but bound to a concrete class.' =>
+                [
+                    $this->createContainer([ContainerInterface::class => self::class]),
+                    ContainerInterface::class,
+                    self::class
+                ],
+            'Has not been bound but is an instantiable concrete class.' =>
+                [
+                    $this->createContainer(),
+                    self::class,
+                    self::class
+                ],
         ];
     }
 
