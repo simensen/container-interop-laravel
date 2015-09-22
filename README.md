@@ -15,6 +15,7 @@ Requirements
 ------------
 
  * PHP 5.5+
+ * illuminate/contracts ^5.0
 
 
 Installation
@@ -22,12 +23,6 @@ Installation
 
 ```bash
 $> composer require monii/container-interop-laravel
-```
-
-Until a stable version has been released or if a development version is preferred, use:
-
-```bash
-$> composer require monii/container-interop-laravel:@dev
 ```
 
 
