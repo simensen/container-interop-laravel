@@ -44,6 +44,15 @@ $container = new LaravelContainer($actualLaravelContainer);
 // $container implements Interop\Container\ContainerInterface
 ```
 
+Service Provider
+-----
+
+In your application configuration add `Monii\Interop\Container\Laravel\ServiceProvidre` to your `providers` array.
+
+```php
+$container = App::make('Interop\Container\ContainerInterface');
+```
+
 License
 -------
 
