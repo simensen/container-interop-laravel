@@ -40,9 +40,9 @@ $container = new LaravelContainer($actualLaravelContainer);
 ```
 
 Service Provider
------
+----------------
 
-In your application configuration add `Monii\Interop\Container\Laravel\ServiceProvidre` to your `providers` array.
+In your application configuration add `Monii\Interop\Container\Laravel\ServiceProvider` to your `providers` array.
 
 ```php
 $container = App::make('Interop\Container\ContainerInterface');
